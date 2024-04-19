@@ -646,22 +646,9 @@
                                 class="contact__form-input "></textarea>
                         </div>
 
-                        
-                        <form id="contactForm" class="contact__form">
-    <button type="button" id="sendMessageBtn" class="button">Send Message</button>
-</form>
-
-<script>
-document.getElementById("sendMessageBtn").addEventListener("click", function() {
-    var name = document.querySelector('.contact__form-input[name="Name"]').value;
-    var email = document.querySelector('.contact__form-input[name="Mail"]').value;
-    var message = document.querySelector('.contact__form-input[name="Message"]').value;
-    var subject = "Message from " + name;
-    var body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + "Message: " + message;
-    window.location.href = "mailto:4nx13tyzip@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-});
-</script>
-
+                         
+                        <form action="mailto:recipient@example.com" method="post" enctype="text/plain" class="contact__button-icon">
+    <button type="submit" class="button">Send Message</button>
 </form>
 
                         </button>
